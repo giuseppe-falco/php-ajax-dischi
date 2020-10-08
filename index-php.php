@@ -4,7 +4,7 @@ Html, Sass, PHP
 Stampiamo i dischi solo con l’utilizzo di PHP, che stampa direttamente i dischi in pagina: al caricamento della pagina ci saranno tutti i dischi (vedi screenshot). In allegato trovate anche il database fake da utilizzare :wink: -->
 
 
-<?php include "db.php";?>
+<?php include "data/db.php";?>
 
 
 
@@ -15,13 +15,14 @@ Stampiamo i dischi solo con l’utilizzo di PHP, che stampa direttamente i disch
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/app.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>PHP Dischi</title>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <img src="logo.svg" alt="">
+                <img src="img/logo.svg" alt="">
             </div>
         </div>
     </header>
@@ -50,6 +51,6 @@ Stampiamo i dischi solo con l’utilizzo di PHP, che stampa direttamente i disch
                 <?php }?>
             </div>
     </main>
-    <script src="dist/app.js"></script>
+    <!-- <script src="dist/app.js"></script> -->
 </body>
 </html>
