@@ -1,0 +1,40 @@
+main{
+    background-color: $bgColorMain;
+    height: 100vh;
+
+    & .container{
+        margin: auto;
+        padding: 30px 0;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: $font;
+
+        & .disk{
+            background-color: $bgColorLight;
+            margin:20px;
+            padding: 15px;
+            text-align: center;
+            color:$textColor;
+            word-break: break-all;
+            width: 230px;
+
+            & .cd-poster{
+                width: 200px;
+                
+                & img{
+                    width: 100%;
+                }
+                
+            }
+            
+            & h3{
+                color: #fff;
+                padding: 20px 0;
+            }
+
+            & .cd-author{
+                padding: 10px 0;
+            }
+        }
+    }
+}

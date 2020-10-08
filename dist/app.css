@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap);* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #2e3a46;
+  padding: 10px 0;
+}
+header .logo {
+  width: 150px;
+}
+header .logo img {
+  width: 100%;
+  color: green;
+}
+
+main {
+  background-color: #1e2d3b;
+  height: 100vh;
+}
+main .container {
+  margin: auto;
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Roboto", sans-serif;
+}
+main .container .disk {
+  background-color: #2e3a46;
+  margin: 20px;
+  padding: 15px;
+  text-align: center;
+  color: #666;
+  word-break: break-all;
+  width: 230px;
+}
+main .container .disk .cd-poster {
+  width: 200px;
+}
+main .container .disk .cd-poster img {
+  width: 100%;
+}
+main .container .disk h3 {
+  color: #fff;
+  padding: 20px 0;
+}
+main .container .disk .cd-author {
+  padding: 10px 0;
+}

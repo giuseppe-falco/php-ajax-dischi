@@ -1,0 +1,15 @@
+header{
+
+    background-color: $bgColorLight;   
+    padding: 10px 0;
+    
+    
+    .logo{
+        width: 150px;
+        
+        & img{
+            width: 100%;
+            color:green
+        }
+    }
+}
