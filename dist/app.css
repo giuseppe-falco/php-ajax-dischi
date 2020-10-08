@@ -25,14 +25,15 @@ main {
   background-color: #1e2d3b;
   height: 100vh;
 }
-main .container {
+main .disk-container {
+  width: 60%;
   margin: auto;
   padding: 30px 0;
   display: flex;
   flex-wrap: wrap;
   font-family: "Roboto", sans-serif;
 }
-main .container .disk {
+main .disk-container .disk {
   background-color: #2e3a46;
   margin: 20px;
   padding: 15px;
@@ -41,16 +42,16 @@ main .container .disk {
   word-break: break-all;
   width: 230px;
 }
-main .container .disk .cd-poster {
+main .disk-container .disk .cd-poster {
   width: 200px;
 }
-main .container .disk .cd-poster img {
+main .disk-container .disk .cd-poster img {
   width: 100%;
 }
-main .container .disk h3 {
+main .disk-container .disk h3 {
   color: #fff;
   padding: 20px 0;
 }
-main .container .disk .cd-author {
+main .disk-container .disk .cd-author {
   padding: 10px 0;
 }

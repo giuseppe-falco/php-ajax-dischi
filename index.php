@@ -1,13 +1,4 @@
-<!-- repo php-ajax-dischi
-Utilizzare:
-Html, Sass, PHP
-Stampiamo i dischi solo con l’utilizzo di PHP, che stampa direttamente i dischi in pagina: al caricamento della pagina ci saranno tutti i dischi (vedi screenshot). In allegato trovate anche il database fake da utilizzare :wink: -->
-
-
-<?php include "db.php";?>
-
-
-
+<!-- esercizio di ieri ma usando chiamata ajax -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,41 +6,38 @@ Stampiamo i dischi solo con l’utilizzo di PHP, che stampa direttamente i disch
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/app.css">
-    <title>PHP Dischi</title>
+    <title>Ajax Dischi</title>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="logo.svg" alt="">
+            <div class="container">
+                <div class="logo">
+                    <img src="logo.svg" alt="">
+                </div>
             </div>
-        </div>
     </header>
     <main>
-        <div class="container">
-                <?php if (!empty($database)) {?>
-                <?php foreach ($database as $disk) { ?>
-                    <div class="disk">
-                        <div class="cd-poster">
-                            <img src="<?php echo $disk["poster"] ?>" alt="">
-                        </div>
-                        <h3>
-                            <?php echo $disk["title"] ?>
-                        </h3>
-                        <div class="cd-author">
-                            <?php echo $disk["author"] ?>
-                        </div>
-                        <div class="cd-year">
-                            <?php echo $disk["year"] ?>
-                        </div>
-
-                    </div>
-                <?php } ?>
-                <?php }else { ?>
-                    <h2>non ci sono cd</h2>
-                <?php }?>
+        <!-- <div class="container"> -->
+            <div class="disk-container"></div>
+        <!-- </div> -->
+    </main>
+    <script id="template-disk" type="text/x-handlebars-template">
+        <div class="disk">
+            <div class="cd-poster">
+                <img src="{{path}}" alt="">
             </div>
-        </main>
+            <h3>
+                {{title}}
+            </h3>
+            <div class="cd-author">
+                {{author}}
+            </div>
+            <div class="cd-year">
+                {{year}}
+            </div>
+
+        </div>
+    </script>
     <script src="dist/app.js"></script>
 </body>
 </html>

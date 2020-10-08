@@ -2,7 +2,8 @@ main{
     background-color: $bgColorMain;
     height: 100vh;
 
-    & .container{
+    & .disk-container{
+        width: 60%;
         margin: auto;
         padding: 30px 0;
         display: flex;

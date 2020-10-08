@@ -16091,7 +16091,35 @@ var $ = __webpack_require__(/*! jquery */ "../../../../node_modules/jquery/dist/
 
 var Handlebars = __webpack_require__(/*! handlebars */ "../../../../node_modules/handlebars/dist/cjs/handlebars.js");
 
-$(document).ready(function () {});
+$(document).ready(function () {
+  $.ajax({
+    url: "http://localhost/lezione_49/php-ajax-dischi/db.php",
+    method: "GET",
+    success: function success(data) {
+      printDisk(data);
+    },
+    error: function error(err) {
+      alert("E' avvenuto un errore. ");
+    }
+  });
+});
+
+function printDisk(data) {
+  var source = $("#template-disk").html();
+  var template = Handlebars.compile(source);
+
+  for (var i = 0; i < data.length; i++) {
+    console.log(data);
+    var context = {
+      title: data[i].title,
+      author: data[i].author,
+      year: data[i].year,
+      path: data[i].poster
+    };
+    var html = template(context);
+    $(".disk-container").append(html);
+  }
+}
 
 /***/ }),
 
